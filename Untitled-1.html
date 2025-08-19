@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infografía - Construcción de Software</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            background: linear-gradient(135deg, #2c3e50, #4a69bd);
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        header h1 {
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+        }
+        
+        header p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 25px;
+            margin-bottom: 30px;
+        }
+        
+        .card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .card-header {
+            background: #4a69bd;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 1.4rem;
+        }
+        
+        .card-body {
+            padding: 25px;
+        }
+        
+        .card-body ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        .card-body li {
+            margin-bottom: 15px;
+            padding-left: 30px;
+            position: relative;
+        }
+        
+        .card-body li i {
+            position: absolute;
+            left: 0;
+            top: 3px;
+            color: #4a69bd;
+        }
+        
+        .process-flow {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .process-flow h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #2c3e50;
+        }
+        
+        .steps {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            margin: 40px 0;
+        }
+        
+        .steps::before {
+            content: '';
+            position: absolute;
+            top: 40px;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: #4a69bd;
+            z-index: 1;
+        }
+        
+        .step {
+            text-align: center;
+            width: 180px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .step-icon {
+            width: 80px;
+            height: 80px;
+            background: #4a69bd;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            margin: 0 auto 15px;
+        }
+        
+        .step-title {
+            font-weight: bold;
+            margin-bottom: 8px;
+            color: #2c3e50;
+        }
+        
+        .step-desc {
+            font-size: 0.9rem;
+            color: #666;
+        }
+        
+        .references {
+            background: #2c3e50;
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .references h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #f5f7fa;
+        }
+        
+        .ref-list {
+            list-style-type: none;
+        }
+        
+        .ref-list li {
+            margin-bottom: 15px;
+            padding-left: 25px;
+            position: relative;
+        }
+        
+        .ref-list li i {
+            position: absolute;
+            left: 0;
+            top: 3px;
+            color: #4a69bd;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            .steps {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .steps::before {
+                display: none;
+            }
+            
+            .step {
+                margin-bottom: 30px;
+                width: 100%;
+                max-width: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Construcción de Software</h1>
+            <p>La creación detallada y funcional de un producto de software mediante un conjunto específico de actividades</p>
+        </header>
+        
+        <div class="info-grid">
+            <div class="card">
+                <div class="card-header">
+                    <h2>Creación Detallada y Funcional</h2>
+                </div>
+                <div class="card-body">
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Énfasis en la creación detallada de software significativo y funcional</li>
+                        <li><i class="fas fa-check-circle"></i> Combinación de actividades: análisis, diseño, codificación, verificación y pruebas</li>
+                        <li><i class="fas fa-check-circle"></i> Requiere conocimientos de algoritmos y prácticas de codificación</li>
+                        <li><i class="fas fa-check-circle"></i> Fundamental para el éxito del producto final</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">
+                    <h2>Área de Conocimiento</h2>
+                </div>
+                <div class="card-body">
+                    <ul>
+                        <li><i class="fas fa-book"></i> Parte del Cuerpo de Conocimiento Central (CBOK) del GSwE2009</li>
+                        <li><i class="fas fa-book"></i> Una de las 11 Áreas de Conocimiento en Ingeniería de Software</li>
+                        <li><i class="fas fa-book"></i> Definida como la creación de software significativo y funcional</li>
+                        <li><i class="fas fa-book"></i> Incluye: codificación, verificación, pruebas unitarias, pruebas de integración y depuración</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">
+                    <h2>Fase de Programación</h2>
+                </div>
+                <div class="card-body">
+                    <ul>
+                        <li><i class="fas fa-code"></i> Convierte el diseño en código funcional</li>
+                        <li><i class="fas fa-code"></i> Desarrolladores escriben, prueban y depuran el software</li>
+                        <li><i class="fas fa-code"></i> Utilización de lenguajes de programación y herramientas seleccionadas</li>
+                        <li><i class="fas fa-code"></i> Construcción de componentes según especificaciones de diseño</li>
+                        <li><i class="fas fa-code"></i> Requiere atención al detalle y colaboración constante</li>
+                        <li><i class="fas fa-code"></i> Culmina con software ejecutable listo para pruebas</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="process-flow">
+            <h2>Proceso de Construcción de Software</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-icon">
+                        <i class="fas fa-pencil-ruler"></i>
+                    </div>
+                    <div class="step-title">Análisis y Diseño</div>
+                    <div class="step-desc">Definición de requisitos y diseño de la arquitectura del software</div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <div class="step-title">Codificación</div>
+                    <div class="step-desc">Implementación del diseño en código utilizando lenguajes de programación</div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-icon">
+                        <i class="fas fa-check-double"></i>
+                    </div>
+                    <div class="step-title">Verificación</div>
+                    <div class="step-desc">Revisión del código y verificación de su correcto funcionamiento</div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-icon">
+                        <i class="fas fa-vial"></i>
+                    </div>
+                    <div class="step-title">Pruebas</div>
+                    <div class="step-desc">Pruebas unitarias y de integración para asegurar la calidad</div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-icon">
+                        <i class="fas fa-bug"></i>
+                    </div>
+                    <div class="step-title">Depuración</div>
+                    <div class="step-desc">Corrección de errores y problemas identificados</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="references">
+            <h2>Referencias</h2>
+            <ul class="ref-list">
+                <li><i class="fas fa-bookmark"></i> Prieto, C. A., & Madrid, D. A. (2022). Buenas prácticas en la construcción de Software. Revista Tecnol.Investig.Academia TIA, 10(2), 149-167.</li>
+                <li><i class="fas fa-bookmark"></i> Almeida Dueñas, C. I. (2020). Fundamentos de la Construcción de Software. Universidad Técnica Estatal de Quevedo.</li>
+                <li><i class="fas fa-bookmark"></i> Camilloni, L. (2015). Evaluación de las carreras de posgrado en Ingeniería de Software de la Universidad de la República (Tesis de Maestría). Facultad de Ingeniería - Universidad de la República.</li>
+                <li><i class="fas fa-bookmark"></i> Prieto, E. (2025, February 6). ¿Cuáles son las etapas del desarrollo de software? Tiffin University.</li>
+                <li><i class="fas fa-bookmark"></i> IBM. (n.d.). ¿Qué es el desarrollo de software?</li>
+            </ul>
+        </div>
+        
+        <footer>
+            <p>Infografía basada en el documento "ConstruccionSoftware.pdf" | Diseñado con HTML y CSS</p>
+        </footer>
+    </div>
+</body>
+</html>
